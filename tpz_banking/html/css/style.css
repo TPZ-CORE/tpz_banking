@@ -1,0 +1,681 @@
+@import url('https://fonts.cdnfonts.com/css/chinese-rocks');
+
+
+@font-face {
+  font-family: crock;
+  src: url(../fonts/crock.ttf) format('truetype');
+}
+
+body {
+	width: 90%;
+	height: 75%;
+	padding: 0;
+	margin: 0;
+	overflow: hidden;
+
+    text-align: center;
+	justify-content: center;
+	align-items: center;
+
+  margin-left: 5%;
+  margin-top: -25%;
+
+}
+
+#banking{
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
+
+  margin-top: 30vw;
+
+  font-family: "crock", crock, serif;
+
+
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position-x: center;
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  
+  justify-content: center;
+
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently */
+}
+
+#banking_account_iban{
+  position: absolute;
+
+  font-family: "crock", crock, serif;
+  color: rgba(31, 31, 31, 0.747);
+
+  font-size: 0.9vw;
+  
+	width: 13.9vw;
+  margin-top: 15.4vw;
+  margin-left: 38.3vw;
+	text-align: center;
+}
+
+#banking_account_username{
+  position: absolute;
+
+  font-family: "crock", crock, serif;
+  color: rgba(31, 31, 31, 0.747);
+
+  font-size: 0.9vw;
+  
+	width: 13.9vw;
+  margin-top: 19.8vw;
+  margin-left: 38.3vw;
+	text-align: center;
+}
+
+
+#banking_transaction_account_title {
+  position: absolute;
+  
+  font-family: "crock", crock, serif;
+  color: #2e351ee5;
+
+  font-size: 1vw;
+
+  height: 1.4vw;
+	width: 13.9vw;
+
+  margin-left: 38.3vw;
+  margin-top: 22.5vw;
+
+	text-align: center;
+}
+
+#banking_transaction_previous {
+  position: absolute;
+
+  font-family: "crock", crock, serif;
+
+	color: rgb(199, 199, 199);
+	font-size: 0.7vw;
+  text-align: center;
+
+  width: 1vw;
+  height: 1vw;
+
+  margin-top: 24.8vw;
+  margin-left: 36.6vw;
+
+  background-color: rgba(31, 31, 31, 0.623);
+}
+
+#banking_transaction_current {
+	position: absolute;
+
+  font-family: "crock", crock, serif;
+
+	color: rgb(199, 199, 199);
+	font-size: 0.7vw;
+  text-align: center;
+
+	width: 13.9vw;
+  height: 1vw;
+
+  margin-top: 24.8vw;
+  margin-left: 38.3vw;
+
+  background-color: rgb(31, 31, 31);
+}
+
+#banking_transaction_next {
+  position: absolute;
+
+  font-family: "crock", crock, serif;
+
+	color: rgb(199, 199, 199);
+	font-size: 0.7vw;
+  text-align: center;
+
+  width: 1vw;
+  height: 1vw;
+
+  margin-top: 24.8vw;
+  margin-left: 52.8vw;
+
+  background-color: rgba(31, 31, 31, 0.623);
+}
+
+
+#banking_transaction_previous:hover, #banking_transaction_next:hover {
+  opacity: 0.9;
+}
+
+#banking_transaction_title {
+  position: absolute;
+  
+  font-family: "crock", crock, serif;
+  color: #2e351ee5;
+
+  font-size: 1vw;
+
+  height: 1.4vw;
+	width: 13.9vw;
+
+  margin-left: 38.3vw;
+  margin-top: 27vw;
+
+	text-align: center;
+
+}
+
+#banking_transaction_amount_input {
+	position: absolute;
+
+  font-family: "crock", crock, serif;
+
+	color: rgb(199, 199, 199);
+	font-size: 0.7vw;
+  text-align: center;
+
+	width: 13.9vw;
+  height: 1vw;
+
+  margin-top: 28.8vw;
+  margin-left: 38.3vw;
+
+  background-color: rgb(31, 31, 31);
+}
+
+#banking_transaction_iban_input {
+  position: absolute;
+
+  font-family: "crock", crock, serif;
+
+	color: rgb(199, 199, 199);
+	font-size: 0.7vw;
+  text-align: center;
+
+	width: 13.9vw;
+  height: 1vw;
+
+  margin-top: 24.8vw;
+  margin-left: 38.3vw;
+
+  background-color: rgb(31, 31, 31);
+}
+
+/* ------------------------- */
+/* Main Page */
+/* ------------------------- */
+
+#banking_account_money_balance {
+  position: absolute;
+  
+  font-family: "crock", crock, serif;
+  color: rgba(31, 31, 31, 0.747);
+	font-size: 1.3vw;
+  
+	width: 8vw;
+  margin-top: 27.4vw;
+  margin-left: 24.45vw;
+	text-align: center;
+}
+
+#banking_account_gold_balance {
+  position: absolute;
+  
+  font-family: "crock", crock, serif;
+
+  color: rgba(31, 31, 31, 0.747);
+	font-size: 1.3vw;
+  
+	width: 8vw;
+  margin-top: 27.4vw;
+  margin-left: 57.65vw;
+	text-align: center;
+}
+
+
+.banking_buttons {
+  position: absolute;
+  
+  font-family: "crock", crock, serif;
+  color: #2e351ee5;
+
+  font-size: 1vw;
+
+  height: 1.4vw;
+	width: 13.9vw;
+
+  margin-left: 38.3vw;
+	text-align: center;
+
+  border-radius: 2%;
+  background-color: #6b7461ad;
+	border: 1px solid rgba(129, 129, 129, 0.253);
+}
+
+#banking_deposit_button {
+  margin-top: 22.8vw;
+}
+
+#banking_withdraw_button {
+  margin-top: 24.8vw;
+}
+
+#banking_transfer_button {
+  margin-top: 26.8vw;
+}
+
+#banking_billing_button {
+  margin-top: 28.8vw;
+}
+
+#banking_records_button {
+  margin-top: 30.8vw;
+}
+
+#banking_exit_button {
+  margin-top: 32.8vw;
+}
+
+#banking_deposit_button:hover, #banking_withdraw_button:hover, #banking_transfer_button:hover, 
+#banking_billing_button:hover, #banking_records_button:hover, #banking_exit_button:hover {
+  opacity: 0.9;
+}
+
+
+/* Page Action Buttons Page */
+
+#banking_transaction_accept_button {
+  margin-top: 30.8vw;
+}
+
+#banking_transaction_back_button,
+#banking_billingpage_back_button,
+#banking_recordspage_back_button {
+  margin-top: 32.8vw;
+}
+
+#banking_transaction_accept_button:hover, #banking_transaction_back_button:hover, 
+#banking_billingpage_back_button:hover,
+#banking_recordspage_back_button:hover {
+  opacity: 0.9;
+}
+
+
+/* Transfer Page */
+
+#banking_transaction_transfer_fee_footer {
+  position: absolute;
+  
+  font-family: "crock", crock, serif;
+  color: #35211ee5;
+
+  font-size: 0.5vw;
+
+  height: 1.4vw;
+	width: 13.9vw;
+
+  margin-left: 38.3vw;
+  margin-top: 23.9vw;
+
+	text-align: center;
+  
+}
+
+/* Billing */
+
+.banking_billingpage_label {
+  position: absolute;
+
+  font-weight: bold;
+	text-align: center;
+
+  height: 1vw;
+
+  font-family: "crock", crock, serif;
+
+	font-size: 0.7vw;
+  color: #2e351ee5;
+
+  margin-top: 22.5vw;
+  
+  background-color: #6b7461ad;
+	border: 1px solid rgba(129, 129, 129, 0.253);
+}
+
+
+#banking_billingpage_action {
+	width: 4.2vw;
+
+  margin-left: 28.4vw;
+}
+
+#banking_billingpage_reason {
+	width: 6vw;
+  margin-left: 33vw;
+}
+
+#banking_billingpage_issuer {
+	width: 7vw;
+	margin-left: 39.35vw;
+}
+
+#banking_billingpage_account {
+	width: 3.2vw;
+	margin-left: 46.8vw;
+}
+
+#banking_billingpage_cost {
+	width: 4.3vw;
+	margin-left: 50.45vw;
+}
+
+#banking_billingpage_date {
+	width: 5.6vw;
+  margin-left: 55.2vw;
+}
+
+
+#billings {
+
+  position: absolute;
+
+	overflow-y: scroll;
+
+  width: 34vw;
+  height: 8vw;
+
+  margin-top: 24vw;
+  margin-left: 27.7vw;
+
+  background-color: #6b7461ad;
+	border: 1px solid rgba(17, 17, 17, 0.397);
+} 
+
+#billings_main {
+	position: relative;
+	color: white;
+
+	width: 33vw;
+	height: 1.3vw;
+
+	flex: 0 0 auto;
+
+	margin-left: 0.5vw;
+	margin-top: 0.5vw;
+
+	/* background-size: 100%; */
+	background-color: rgba(6, 82, 117, 0.185);
+	box-shadow: inset 0 0 2px 2px rgba(22, 22, 22, 0.616);
+}
+
+.billings_label {
+	position: absolute;
+
+  font-weight: bold;
+	text-align: center;
+
+  height: 1vw;
+
+	font-size: 0.7vw;
+  color: rgba(47, 47, 47, 0.883);
+
+  margin-top: -1.14vw;
+  padding-left: 0.3vw;
+  
+	box-shadow: inset 0 0 2px 2px rgba(22, 22, 22, 0.616);
+	background-color: rgba(222, 184, 135, 0.493);
+}
+
+#billings_button{
+	width: 4vw;
+	margin-left: 0.7vw;
+}
+
+#billings_button:hover{
+  opacity: 0.7;
+}
+
+#billings_reason{
+	width: 6vw;
+	margin-left: 5.15vw;
+}
+  
+#billings_issuer{
+	width: 7vw;
+	margin-left: 11.55vw;
+}
+
+#billings_account{
+	width: 3.2vw;
+	margin-left: 19vw;
+}
+
+#billings_cost{
+	width: 4.3vw;
+	margin-left: 22.65vw;
+}
+
+#billings_date{
+	width: 5.6vw;
+	margin-left: 27.4vw;
+}
+
+/* History Records */
+
+.banking_recordspage_label {
+  position: absolute;
+
+  font-weight: bold;
+	text-align: center;
+
+  height: 1vw;
+
+  font-family: "crock", crock, serif;
+
+	font-size: 0.7vw;
+  color: #2e351ee5;
+
+  margin-top: 22.5vw;
+  
+  background-color: #6b7461ad;
+	border: 1px solid rgba(129, 129, 129, 0.253);
+}
+
+#banking_recordspage_reason {
+	width: 10vw;
+  margin-left: 28.6vw;
+}
+
+#banking_recordspage_account {
+	width: 7vw;
+	margin-left: 39vw;
+}
+
+#banking_recordspage_cost {
+	width: 5.55vw;
+	margin-left: 46.45vw;
+}
+
+#banking_recordspage_date {
+	width: 8.4vw;
+  margin-left: 52.45vw;
+}
+
+#history_records {
+
+  position: absolute;
+
+	overflow-y: scroll;
+
+  width: 34vw;
+  height: 8vw;
+
+  margin-top: 24vw;
+  margin-left: 27.7vw;
+
+  background-color: #6b7461ad;
+	border: 1px solid rgba(17, 17, 17, 0.397);
+} 
+
+#history_records_main {
+	position: relative;
+	color: white;
+
+	width: 33vw;
+	height: 1.3vw;
+
+	flex: 0 0 auto;
+
+	margin-left: 0.5vw;
+	margin-top: 0.5vw;
+
+	/* background-size: 100%; */
+	background-color: rgba(6, 82, 117, 0.185);
+	box-shadow: inset 0 0 2px 2px rgba(22, 22, 22, 0.616);
+}
+
+.history_record_label {
+	position: absolute;
+
+  font-weight: bold;
+	text-align: center;
+
+  height: 1vw;
+
+	font-size: 0.7vw;
+  color: rgba(47, 47, 47, 0.883);
+
+  margin-top: -1.14vw;
+  padding-left: 0.3vw;
+  
+	box-shadow: inset 0 0 2px 2px rgba(22, 22, 22, 0.616);
+	background-color: rgba(222, 184, 135, 0.493);
+}
+
+#history_records_reason{
+	width: 10vw;
+	margin-left: 0.7vw;
+}
+  
+#history_records_account{
+	width: 7vw;
+	margin-left: 11.15vw;
+}
+
+#history_records_cost{
+	width: 5.55vw;
+	margin-left: 18.6vw;
+}
+
+#history_records_date{
+	width: 8.4vw;
+	margin-left: 24.6vw;
+}
+
+/* Input */
+
+
+#banking_account_select, #banking_w_account_select, #banking_t_account_select{
+	position: absolute;
+
+  font-family: "crock", crock, serif;
+
+	color: rgb(199, 199, 199);
+	font-size: 0.7vw;
+  text-align: center;
+
+  width: 5vw;
+  height: 1vw;
+
+  margin-top: -22vw;
+  margin-left: 30.85vw;
+
+  background-color: rgb(31, 31, 31);
+}
+
+#banking_bank_select {
+	position: absolute;
+
+  font-family: "crock", crock, serif;
+
+	color: rgb(199, 199, 199);
+	font-size: 0.7vw;
+  text-align: center;
+
+  width: 5vw;
+  height: 1vw;
+
+  margin-top: -20.5vw;
+  margin-left: 27.6vw;
+
+  background-color: rgb(31, 31, 31);
+}
+
+/* Notifications */
+
+#notification_message {
+  position: absolute;
+
+  font-family: 'Chinese Rocks Rg', sans-serif;
+
+  padding-top: 0.5vw;
+
+  text-align: center;
+  font-size: 0.8vw;
+  width: 30vw;
+  height: 3vw;
+  
+  margin-top: -4vw;
+  margin-left: 30.6vw;
+
+  padding-top: 1vw;
+
+  background-image: url(../img/notify_bg.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+	background-size: cover;
+
+  opacity: 0.8;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+  scroll-behavior: smooth;
+
+}
+/* Track */
+::-webkit-scrollbar-track {
+  border: 0.0px solid grey;
+  border-radius: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(49, 49, 49, 0.8);
+  border-radius: 5px;
+}
+
+input[type=text] {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+
+	color:#2e351ee5;
+
+	text-align: center;
+  background-color: rgba(231, 231, 231, 0.781);
+	border: 1px solid rgba(129, 129, 129, 0.253);
+}
