@@ -1,7 +1,7 @@
 
 Config = {}
 
-Config.DevMode    = true
+Config.DevMode    = false
 Config.PromptKey  = { key = 0x760A9C6F, label = 'Banking Account ' } -- G
 
 -----------------------------------------------------------
