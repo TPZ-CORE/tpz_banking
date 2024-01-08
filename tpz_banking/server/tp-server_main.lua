@@ -231,7 +231,7 @@ end)
 -----------------------------------------------------------
 
 RegisterServerEvent('tpz_banking:depositDefaultBankingAccount')
-AddEventHandler('tpz_banking:depositDefaultBankingAccount', function(targetId, amount, reason)
+AddEventHandler('tpz_banking:depositDefaultBankingAccount', function(targetId, amount, reason, isSalary)
   local _tsource = targetId
 
   local defaultBankName = Config.DefaultBankSalaryReceive
@@ -245,6 +245,11 @@ AddEventHandler('tpz_banking:depositDefaultBankingAccount', function(targetId, a
   Banking[_tsource][defaultBankName].money = Banking[_tsource][defaultBankName].money + amount
 
   RegisterHistoryRecord(_tsource, Config.DefaultBankSalaryReceive, bankData.identifier, bankData.charidentifier, reason, 0, amount)
+
+  if isSalary then
+    local notifyData = Locales['SALARY_RECEIVED']
+    TriggerClientEvent("tpz_notify:sendNotification", _tsource, notifyData.title, notifyData.message, notifyData.icon, "info", notifyData.duration)
+  end
 
   TriggerClientEvent("tpz_banking:refreshPlayerBankInformation", _tsource)
 end)
