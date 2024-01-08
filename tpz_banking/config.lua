@@ -73,12 +73,6 @@ Config.Banks = {
             Duration = {am = 7, pm = 21},
         },
 
-
-        Blips = {
-            Enabled = true,
-            Sprite = -2128054417,
-        },
-
         BlipData = {
             Enabled = true,
             Title   = "Valentine Bank",
