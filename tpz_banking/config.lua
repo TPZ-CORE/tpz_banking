@@ -34,7 +34,16 @@ Config.BankRegistryCost = 5
 -- Unlocking Bank Doors.
 Config.DoorSystemSetDoorStates = true
 
+-- The year of your server which is based and playing on.
 Config.Year = 1890
+
+-- (!) Make sure the name of the bank is the same as your Config.Banks.
+-- DO NOT Change without knowledge.
+
+-- The following option is based for tpz_society and only, in what bank should the players
+-- receive their salaries (if society salary is enabled).
+-- if the player has not been registered to that bank, the salary will be lost.
+Config.DefaultBankSalaryReceive = "valentine"
 
 -----------------------------------------------------------
 --[[ Webhooking ]]--
