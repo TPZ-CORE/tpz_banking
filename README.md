@@ -1,2 +1,7 @@
 # tpz_banking
-TPZ-CORE Banking
+
+> Requirements
+
+TPZ-Societies
+TPZ-Notify: https://github.com/TPZ-CORE/tpz_notify
+
