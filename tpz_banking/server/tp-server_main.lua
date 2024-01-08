@@ -225,6 +225,28 @@ AddEventHandler('tpz_banking:registerBankAccount', function(bankName)
 end)
 
 -----------------------------------------------------------
+--[[ Events - Banking Deposits (Other Scripts) ]]--
+-----------------------------------------------------------
+
+RegisterServerEvent('tpz_banking:depositDefaultBankingAccount')
+AddEventHandler('tpz_banking:depositDefaultBankingAccount', function(targetId, amount, reason)
+  local _tsource = targetId
+
+  local defaultBankName = Config.DefaultBankSalaryReceive
+
+  local bankData = Banking[_tsource][Config.DefaultBankSalaryReceive]
+
+  if bankData == nil then
+    -- Player not registered to the default bank which supports society salaries or any other reasons.
+    return
+  end
+
+  Banking[_tsource][defaultBankName].money = Banking[_tsource][defaultBankName].money + amount
+
+  RegisterHistoryRecord(_tsource, Config.DefaultBankSalaryReceive, bankData.identifier, bankData.charidentifier, reason, 0, amount)
+end)
+
+-----------------------------------------------------------
 --[[ Events - Deposit, Withdraw & Transfers ]]--
 -----------------------------------------------------------
 
