@@ -41,4 +41,18 @@ Locales = {
         ['WITHDREW']                     = "You have withdrew %s gold from the bank account.",
     },
 
+    ['NOT_ENOUGH_FOR_REGISTRATION'] = { 
+        title = "Banking", 
+        message = "You don't have enough money to register a new banking account.",
+        icon = "banking",
+        duration = 4
+    },
+
+    ['SUCCESS_REGISTRATION'] = {
+        title = "Banking", 
+        message = "You have successfully registered a new banking account.",
+        icon = "banking",
+        duration = 4
+    }
+
 }
