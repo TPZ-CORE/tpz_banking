@@ -232,7 +232,7 @@ OpenBankingNUI = function(bankName)
                 buttonparam2 = Locales['BANKING_REGISTRY_DECLINE_BUTTON']
             }
                                         
-            TriggerEvent("tp_inputs:getButtonInput", inputData, function(cb)
+            TriggerEvent("tpz_inputs:getButtonInput", inputData, function(cb)
             
                 if cb == "ACCEPT" then
                     TriggerServerEvent('tpz_banking:registerBankAccount', ClientData.CurrentBankName)
