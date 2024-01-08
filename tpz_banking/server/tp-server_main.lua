@@ -188,13 +188,16 @@ AddEventHandler('tpz_banking:registerBankAccount', function(bankName)
   local money = xPlayer.getAccount(0)
 
   if money < Config.BankRegistryCost then
-    -- notification of banking
+
+    local wNotifyData = Locales['NOT_ENOUGH_FOR_REGISTRATION']
+    TriggerClientEvent("tpz_notify:sendNotification", _source, wNotifyData.title,  wNotifyData.message, wNotifyData.icon, "error", wNotifyData.duration)
     return
   end
 
   xPlayer.removeAccount(0, Config.BankRegistryCost)
 
-  -- paid notify and registry
+  local notifyData = Locales['SUCCESS_REGISTRATION']
+  TriggerClientEvent("tpz_notify:sendNotification", _source, notifyData.title, notifyData.message, notifyData.icon, "success", notifyData.duration)
 
   if Banking[_source] == nil then
     Banking[_source] = {}
@@ -221,7 +224,6 @@ AddEventHandler('tpz_banking:registerBankAccount', function(bankName)
   }
   exports.ghmattimysql:execute("INSERT INTO banking ( `bank`, `name`,`identifier`,`charidentifier`, `username`, `money`,`gold`) VALUES ( @bank, @name, @identifier, @charidentifier, @username, @money, @gold)", Parameters)
 
-
 end)
 
 -----------------------------------------------------------
@@ -233,10 +235,9 @@ AddEventHandler('tpz_banking:depositDefaultBankingAccount', function(targetId, a
   local _tsource = targetId
 
   local defaultBankName = Config.DefaultBankSalaryReceive
+  local bankData        = Banking[_tsource][Config.DefaultBankSalaryReceive]
 
-  local bankData = Banking[_tsource][Config.DefaultBankSalaryReceive]
-
-  if bankData == nil then
+  if bankData == nil or GetPlayerName(_tsource) == nil then
     -- Player not registered to the default bank which supports society salaries or any other reasons.
     return
   end
@@ -244,6 +245,8 @@ AddEventHandler('tpz_banking:depositDefaultBankingAccount', function(targetId, a
   Banking[_tsource][defaultBankName].money = Banking[_tsource][defaultBankName].money + amount
 
   RegisterHistoryRecord(_tsource, Config.DefaultBankSalaryReceive, bankData.identifier, bankData.charidentifier, reason, 0, amount)
+
+  TriggerClientEvent("tpz_banking:refreshPlayerBankInformation", _tsource)
 end)
 
 -----------------------------------------------------------
@@ -274,7 +277,6 @@ AddEventHandler('tpz_banking:depositAccountMoney', function(account, amount, ban
 
   local bankData = Banking[_source][bankName]
 
-  -- webhook
   TriggerClientEvent("tpz_banking:refreshPlayerBankInformation", _source)
 
   TriggerClientEvent("tpz_banking:sendNotification", _source, string.format(Locales[account]['DEPOSITED'], amount), 'success')
