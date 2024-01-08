@@ -53,6 +53,13 @@ Locales = {
         message = "You have successfully registered a new banking account.",
         icon = "banking",
         duration = 4
-    }
+    },
+
+    ['SALARY_RECEIVED'] = {
+        title = "Banking", 
+        message = "You have received a salary from your work, checkout your bank account.",
+        icon = "banking",
+        duration = 8
+    },
 
 }
