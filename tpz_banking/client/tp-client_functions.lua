@@ -79,7 +79,7 @@ end)
 ]]---------------------------------------------------------
 
 LoadModel = function(model)
-    local model = GetHashKey(model)
+    local model = joaat(model)
     RequestModel(model)
 
     while not HasModelLoaded(model) do RequestModel(model)
