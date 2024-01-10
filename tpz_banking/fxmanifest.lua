@@ -13,3 +13,5 @@ server_scripts { 'server/*.lua' }
 client_scripts { 'client/*.lua' }
 
 files { 'html/**/*' }
+
+lua54 'yes'
