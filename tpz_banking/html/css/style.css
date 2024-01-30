@@ -382,7 +382,7 @@ body {
 }
 
 #banking_billingpage_date {
-	width: 5.6vw;
+	width: 6.1vw;
   margin-left: 55.2vw;
 }
 
@@ -393,7 +393,7 @@ body {
 
 	overflow-y: scroll;
 
-  width: 34vw;
+  width: 34.5vw;
   height: 8vw;
 
   margin-top: 24vw;
@@ -407,7 +407,7 @@ body {
 	position: relative;
 	color: white;
 
-	width: 33vw;
+	width: 33.5vw;
 	height: 1.3vw;
 
 	flex: 0 0 auto;
@@ -468,8 +468,9 @@ body {
 }
 
 #billings_date{
-	width: 5.6vw;
+	width: 6.1vw;
 	margin-left: 27.4vw;
+  font-size: 0.65vw;
 }
 
 /* History Records */
@@ -509,7 +510,7 @@ body {
 }
 
 #banking_recordspage_date {
-	width: 8.4vw;
+	width: 8.9vw;
   margin-left: 52.45vw;
 }
 
@@ -519,7 +520,7 @@ body {
 
 	overflow-y: scroll;
 
-  width: 34vw;
+  width: 34.5vw;
   height: 8vw;
 
   margin-top: 24vw;
@@ -533,7 +534,7 @@ body {
 	position: relative;
 	color: white;
 
-	width: 33vw;
+	width: 33.5vw;
 	height: 1.3vw;
 
 	flex: 0 0 auto;
@@ -580,7 +581,7 @@ body {
 }
 
 #history_records_date{
-	width: 8.4vw;
+	width: 8.9vw;
 	margin-left: 24.6vw;
 }
 
