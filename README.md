@@ -10,7 +10,7 @@ TPZ Society : https://github.com/TPZ-CORE/tpz_society
 
 1. When opening the zip file, open `tpz_banking-main` directory folder and inside there will be another directory folder which is called as `tpz_banking`, this directory folder is the one that should be exported to your resources (The folder which contains `fxmanifest.lua`).
 
-2. Add `ensure tpz_menu_base` before `tpz_core` in the resources.cfg or server.cfg, depends where your scripts are located.
+2. Add `ensure tpz_menu_base` after the Requirements in the resources.cfg or server.cfg, depends where your scripts are located.
 
 ## Screenshot Displays
 ![image](https://github.com/TPZ-CORE/tpz_banking/assets/152554963/a4292427-6d8c-4aa8-a5b9-ffcb64ce56af)
