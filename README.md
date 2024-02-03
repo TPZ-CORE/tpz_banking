@@ -6,7 +6,7 @@
 2. TPZ-Characters: https://github.com/TPZ-CORE/tpz_characters
 3. TPZ-Inventory : https://github.com/TPZ-CORE/tpz_inventory
 4. TPZ-Notify: https://github.com/TPZ-CORE/tpz_notify
-5. TPZ Society : https://github.com/TPZ-CORE/tpz_society
+5. TPZ-Society : https://github.com/TPZ-CORE/tpz_society
    
 # Installation
 
