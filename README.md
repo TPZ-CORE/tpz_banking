@@ -14,9 +14,35 @@
 
 2. Add `ensure tpz_banking` after the **REQUIREMENTS** in the resources.cfg or server.cfg, depends where your scripts are located.
 
+# Development API
+
+## Exports
+
+**Getter**
+The specified export below is used on the `server` to use the API properly and faster.
+
+```lua
+local BankAPI = exports.tpz_banking:getAPI()
+```
+
+| Export                                                                    | Description                                                                                                                                                                                                                | Returned Type |
+|---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
+| `BankAPI.getIBANBySource(source)`               | Returns the player IBAN Account.    | String        |
+| `BankAPI.getIBANByCharIdentifier(charIdentifier)`   | Returns the player IBAN Account (if available).   | String        |
+| `BankAPI.getAccountMoney(iban, account)`                                  | Returns the account money (Cash / Gold) from an IBAN Account.                                                                                                                                                              | Integer       |
+| `BankAPI.executeTransactionType(iban, transactionType, account, amount)`  | Executes transaction type ( DEPOSIT, WITHDRAW ).                                                                                                                                                                           | N/A           |
+| `BankAPI.getBankAccounts()`                                               | Returns all the available Bank Accounts.                                                                                                                                                                                   | Table         |
+
+
+## Parameters Explanation
+
+| Parameter                                                                          | Description                                                                                                                                          |
+|------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `iban`                                                                             | Requires the IBAN account on a string form (text).                                                                                                   | 
+| `source`                                                                           | Requires an online player id source target                                                                                                           | 
+| `charIdentifier`                                                                   | Requires an online or offline player character identifier.                                                       | 
+| `account`                                                                          | The available account types are `CASH` and `GOLD`                                                                                                    | 
+| `transactionType`                                                                  | The available transaction types are `DEPOSIT` and `WITHDRAW`                                                                                         | 
+
 ## Screenshot Displays
-![image](https://github.com/TPZ-CORE/tpz_banking/assets/152554963/a4292427-6d8c-4aa8-a5b9-ffcb64ce56af)
-![image](https://github.com/TPZ-CORE/tpz_banking/assets/152554963/1c092efd-75b2-4ac0-b5fc-7ea30e033128)
-![image](https://github.com/TPZ-CORE/tpz_banking/assets/152554963/fa76d3f4-6345-4a53-9441-6712b1ca4dfb)
-![image](https://github.com/TPZ-CORE/tpz_banking/assets/152554963/3372629a-fb8d-42ae-84fa-aa3878dfb455)
-![image](https://github.com/TPZ-CORE/tpz_banking/assets/152554963/eea3f7ae-d727-4d4c-b4af-84778b477e24)
+
