@@ -17,6 +17,11 @@ Config.NotificationColors = {
 --[[ General ]]--
 -----------------------------------------------------------
 
+-- As default, we save all data every 10 minutes to avoid data loss in case for server crashes.
+-- @param Enabled : Set to false do disable saving every x minutes.
+-- @param Duration : Time in minutes.
+Config.SaveDataRepeatingTimer = { Enabled = true, Duration = 10 }
+
 -- NPC Rendering Distance which is deleting the npc when being away from the bank.
 Config.NPCRenderingDistance = 20.0
 
