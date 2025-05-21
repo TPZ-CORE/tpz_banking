@@ -5,9 +5,7 @@
 1. TPZ-Core: https://github.com/TPZ-CORE/tpz_core
 2. TPZ-Characters: https://github.com/TPZ-CORE/tpz_characters
 3. TPZ-Inventory : https://github.com/TPZ-CORE/tpz_inventory
-4. TPZ-Notify: https://github.com/TPZ-CORE/tpz_notify
-5. TPZ-Society : https://github.com/TPZ-CORE/tpz_society
-   
+
 # Installation
 
 1. When opening the zip file, open `tpz_banking-main` directory folder and inside there will be another directory folder which is called as `tpz_banking`, this directory folder is the one that should be exported to your resources (The folder which contains `fxmanifest.lua`).
