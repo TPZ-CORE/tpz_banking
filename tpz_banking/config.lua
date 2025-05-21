@@ -17,6 +17,10 @@ Config.NotificationColors = {
 --[[ General ]]--
 -----------------------------------------------------------
 
+-- The following option is saving all the data before server restart hours
+-- (2-3 Minutes atleast before server restart is mostly preferred).
+Config.RestartHours = { "7:57" , "13:57", "19:57", "1:57"}
+
 -- As default, we save all data every 10 minutes to avoid data loss in case for server crashes.
 -- @param Enabled : Set to false do disable saving every x minutes.
 -- @param Duration : Time in minutes.
