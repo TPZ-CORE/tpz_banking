@@ -22,13 +22,15 @@ $(function() {
 
           TRANSACTION_ACTION_TYPE = "MAIN";
 
+          $('#banking_account_iban').hide();
+
           let $description = Locales['ACCOUNT_REGISTER_DESCRIPTION'].replace('<cost>', item.account_cost);
           $("#banking_account_create_page_description").text($description);
 
           $('.banking_account_create_page').fadeIn();
 
         }else{
-
+          $('#banking_account_iban').show();
           $('.banking_mainpage').fadeIn();
         }
       
