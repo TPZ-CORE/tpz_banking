@@ -137,3 +137,63 @@ AddEventHandler('tpz_banking:server:isPlayerReady', function()
   end
 
 end)
+
+-----------------------------------------------------------
+--[[ Threads ]]--
+-----------------------------------------------------------
+
+local CurrentTime = 0
+
+Citizen.CreateThread(function()
+	while true do
+		Wait(60000)
+
+    local time        = os.date("*t") 
+    local currentTime = table.concat({time.hour, time.min}, ":")
+
+    local finished    = false
+    local shouldSave  = false
+
+    for index, restartHour in pairs (Config.RestartHours) do
+
+      if currentTime == restartHour then
+        shouldSave = true
+      end
+
+      if next(Config.RestartHours, index) == nil then
+        finished = true
+      end
+
+    end
+
+    while not finished do
+      Wait(1000)
+    end
+
+    CurrentTime = CurrentTime + 1
+
+    if Config.SaveDataRepeatingTimer.Enabled and CurrentTime == Config.SaveDataRepeatingTimer.Duration then
+      CurrentTime = 0
+      shouldSave  = true
+    end
+
+    if shouldSave then
+
+      for index, account in pairs (Accounts) do
+
+          local Parameters = { 
+            ['iban']      = account.iban,
+            ['accounts']  = json.encode({ ['cash'] = account.accounts['cash'], ['gold'] = account.accounts['gold'] }),
+          }
+          
+          exports.ghmattimysql:execute("UPDATE `bank_accounts` SET `accounts` = @accounts WHERE `iban` = @iban", Parameters)
+        end
+    
+      end
+
+    end
+
+  end
+
+end)
+
