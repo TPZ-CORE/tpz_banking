@@ -108,7 +108,7 @@ AddEventHandler('playerDropped', function (reason)
 end)
 
 -----------------------------------------------------------
---[[ Base Events ]]--
+--[[ Events ]]--
 -----------------------------------------------------------
 
 RegisterServerEvent('tpz_banking:server:isPlayerReady')
