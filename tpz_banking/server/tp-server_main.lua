@@ -176,7 +176,6 @@ Citizen.CreateThread(function()
           }
           
           exports.ghmattimysql:execute("UPDATE `bank_accounts` SET `accounts` = @accounts WHERE `iban` = @iban", Parameters)
-        end
     
       end
 
