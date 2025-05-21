@@ -30,7 +30,7 @@ local BankAPI = exports.tpz_banking:getAPI()
 | `BankAPI.getIBANBySource(source)`               | Returns the player IBAN Account.    | String        |
 | `BankAPI.getIBANByCharIdentifier(charIdentifier)`   | Returns the player IBAN Account (if available).   | String        |
 | `BankAPI.getAccountMoney(iban, account)`                                  | Returns the account money (Cash / Gold) from an IBAN Account.                                                                                                                                                              | Integer       |
-| `BankAPI.executeTransactionType(iban, transactionType, account, amount)`  | Executes transaction type ( DEPOSIT, WITHDRAW ).                                                                                                                                                                           | N/A           |
+| `BankAPI.executeTransactionType(iban, transactionType, account, amount)`  | Executes transaction type (DEPOSIT, WITHDRAW).                                                                                                                                                                           | N/A           |
 | `BankAPI.getBankAccounts()`                                               | Returns all the available Bank Accounts.                                                                                                                                                                                   | Table         |
 
 
