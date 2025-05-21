@@ -1,0 +1,63 @@
+<html>
+	<head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="nui://game/ui/jquery.js" type="text/javascript"></script>
+    <script src="https://kit.fontawesome.com/1aa8cd39de.js" crossorigin="anonymous"></script>
+  </head>
+
+  <body>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="js/config.js"></script>
+
+    <script src="js/script-utils.js" type="text/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+
+    <div id="banking">
+
+      <div class = "banking_title" id="banking_account_iban"></div>
+
+      <div id="banking_account_money_balance"></div>
+      <div id="banking_account_gold_balance"></div>
+
+      <div class = "banking_account_create_page">
+        <div class = "banking_title" id="banking_account_create_page_title"></div>
+        <div id="banking_account_create_page_description"></div>
+
+        <div class = "banking_buttons" id="banking_account_create_page_button"></div>
+        <div class = "banking_buttons" id="banking_account_create_page_exit_button"></div>
+      </div>
+
+      <div class="banking_mainpage">
+
+        <div class = "banking_buttons" id="banking_deposit_options_page"></div>
+        <div class = "banking_buttons" id="banking_withdraw_options_page"></div>
+        <div class = "banking_buttons" id="banking_transfer_options_page"></div>
+        <div class = "banking_buttons" id="banking_exit_button"></div>
+      </div>
+
+      <div class="banking_transactions_action_page">
+
+        <div id = "banking_transaction_previous" >←</div>
+        <div id = "banking_transaction_current"></div>
+        <div id = "banking_transaction_next" >→</div>
+
+        <div class = "banking_title" id="banking_transaction_input_title"></div>
+
+        <input id="banking_transaction_amount_input" type="text" value = "1" onkeypress = "return onNumbers(event)">
+
+        <div class = "banking_buttons" id="banking_transaction_accept_button"></div>
+        <div class = "banking_buttons" id="banking_transactions_back_action_page"></div>
+
+        <div id="banking_transactions_fees_description_action_page"></div>
+        <input id="banking_transaction_iban_input" type="text" placeholder = "Insert IBAN." oninput = "this.value = this.value.toUpperCase();"></input>
+      </div>
+
+      <div id="notification_message" class = "notification" > </div>
+
+    </div>
+
+  </body>
+
+</html>
