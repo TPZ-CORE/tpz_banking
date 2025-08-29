@@ -47,4 +47,6 @@ exports('getAPI', function()
     return GetAccounts()
   end
 
+  return self
+
 end)
