@@ -162,3 +162,39 @@ if Config.DoorSystemSetDoorStates then
     end)
 
 end
+
+-- PUSH TO TALK.
+CreateThread(function()
+    repeat Wait(5000) until PlayerData.Loaded 
+    local IS_NUI_FOCUSED = false
+
+    while true do
+        local sleep = 0
+
+        if not PlayerData.IsBusy then
+
+            if IS_NUI_FOCUSED then
+                SetNuiFocusKeepInput(false)
+                IS_NUI_FOCUSED = false
+            end
+
+            sleep = 1000
+
+            goto END
+        end
+
+        if PlayerData.IsBusy then
+
+            if not IS_NUI_FOCUSED then
+                SetNuiFocusKeepInput(true)
+                IS_NUI_FOCUSED = true
+            end
+
+            DisableAllControlActions(0)
+            EnableControlAction(0, `INPUT_PUSH_TO_TALK`, true)
+        end
+
+        ::END::
+        Wait(sleep)
+    end
+end)
